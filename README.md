@@ -48,3 +48,18 @@ Below are some results comparing mBEST with FASTDLO and Ariadne+.
 <br>
 <em> Fig. 2 mBEST and SOTA comparison </em>
 </p>
+
+***
+
+### Citation
+If our work has helped your research, please cite the following paper.
+```
+@misc{choi2023mbest,
+      title={mBEST: Realtime Deformable Linear Object Detection Through Minimal Bending Energy Skeleton Pixel Traversals}, 
+      author={Andrew Choi and Dezhong Tong and Brian Park and Demetri Terzopoulos and Jungseock Joo and Mohammad Khalid Jawed},
+      year={2023},
+      eprint={2302.09444},
+      archivePrefix={arXiv},
+      primaryClass={cs.RO}
+}
+```
