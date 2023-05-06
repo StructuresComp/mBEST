@@ -1,5 +1,5 @@
-import cv2
 import sys
+import cv2
 from mBEST import mBEST
 from mBEST.color_masks import detect_pink_green_teal
 

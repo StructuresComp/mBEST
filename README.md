@@ -2,10 +2,10 @@
 
 ---
 
-mBEST is a robust, realtime perception algorithm for deformable linear object (DLO) detection. The algorithm takes as input a binary mask of the DLOs from an image and produces the ordered pixel sequences for each unique DLO. The algorithm is also able to optionally produce segmentation masks. 
+*mBEST* is a robust, realtime perception algorithm for deformable linear object (DLO) detection. The algorithm takes as input a binary mask of the DLOs from an image and produces the ordered pixel sequences as well as segmentation masks for each unique DLO.
 
 For the dataset provided in this repo, simple color filtering is used to achieve the binary masks.
-For those interested in using mBEST for more complex scenes, please use the DCNN model provided by [FASTDLO](https://github.com/lar-unibo/fastdlo) to obtain the initial binary mask.
+For those interested in using *mBEST* for more complex scenes, please use the DCNN model provided by [FASTDLO](https://github.com/lar-unibo/fastdlo) to obtain the initial binary mask.
 
 <p align="center">
 <img src="figures/pipeline.png" alt>
@@ -33,18 +33,19 @@ Afterwards, compile functions using the shell script as shown below.
 ./install.sh
 ```
 
-Once all installation steps have been finished, run mBEST through the provided python script as shown below.
-The simple background with complex DLO configurations dataset used in the manuscript is provided in the `dataset` directory along with ground truth.
+Once all installation steps have been finished, run *mBEST* through the provided python script as shown below.
+The simple background with complex DLO configurations dataset used in the manuscript is provided in the `dataset` directory along with ground truth labels in the form of numpy arrays.
 ```bash
-python3 run.py dataset/images/img1.jpg
+python3 run.py dataset/S3/images/img0.jpg
 ```
 
 ---
 
-Below are some results comparing mBEST with FASTDLO and Ariadne+. 
+Below are some results comparing *mBEST* with *Ariadne+*, *FASTDLO*, and *RT-DLO*.
 
 <p align="center">
-<img src="figures/comparison.png" alt>
+<img src="figures/complex_bg_comparison.png" alt>
+<img src="figures/simple_bg_comparison.png" alt>
 <br>
 <em> Fig. 2 mBEST and SOTA comparison </em>
 </p>
@@ -52,7 +53,7 @@ Below are some results comparing mBEST with FASTDLO and Ariadne+.
 ***
 
 ### Citation
-If our work has helped your research, please cite the following paper.
+If our work has helped your research, please cite the following manuscript.
 ```
 @misc{choi2023mbest,
       title={mBEST: Realtime Deformable Linear Object Detection Through Minimal Bending Energy Skeleton Pixel Traversals}, 
