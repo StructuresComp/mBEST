@@ -60,7 +60,6 @@ def traverse_skeleton(sk, curr_pixel):
         elif view[2, 2]: curr_pixel = np.array([2, 2], dtype=np.int16)
         else: curr_pixel = np.array([-1, -1], dtype=np.int16)
 
-        # curr_pixel = pyy_check(sk[x-1:x+2, y-1, y+2])
         if curr_pixel[0] != -1:
             curr_pixel[0] += x-1
             curr_pixel[1] += y-1
@@ -73,6 +72,29 @@ def traverse_skeleton(sk, curr_pixel):
     for i in range(path_len):
         np_path[i] = path[i]
     return np_path
+
+
+@cc.export('traverse_skeleton_n_pixels', 'int16[:](uint8[:, :], int16[:], int32)')
+def traverse_skeleton_n_pixels(sk, curr_pixel, n):
+    for i in range(n):
+        x, y = curr_pixel
+        sk[x, y] = 0
+
+        view = sk[x-1:x+2, y-1:y+2]
+        if view[0, 0]: curr_pixel =   np.array([0, 0], dtype=np.int16)
+        elif view[0, 1]: curr_pixel = np.array([0, 1], dtype=np.int16)
+        elif view[0, 2]: curr_pixel = np.array([0, 2], dtype=np.int16)
+        elif view[1, 0]: curr_pixel = np.array([1, 0], dtype=np.int16)
+        elif view[1, 2]: curr_pixel = np.array([1, 2], dtype=np.int16)
+        elif view[2, 0]: curr_pixel = np.array([2, 0], dtype=np.int16)
+        elif view[2, 1]: curr_pixel = np.array([2, 1], dtype=np.int16)
+        elif view[2, 2]: curr_pixel = np.array([2, 2], dtype=np.int16)
+        else: return curr_pixel
+
+        curr_pixel[0] += x-1
+        curr_pixel[1] += y-1
+
+    return curr_pixel
 
 
 if __name__ == '__main__':
