@@ -1,16 +1,25 @@
 ## mBEST: minimal Bending Energy Skeleton pixel Traversals
 
 ---
+<p align="center">
+<img src="figures/pipeline.png" alt>
+<br>
+<em> mBEST Pipeline Overview </em>
+</p>
+
 
 *mBEST* is a robust, realtime perception algorithm for deformable linear object (DLO) detection. The algorithm takes as input a binary mask of the DLOs from an image and produces the ordered pixel sequences as well as segmentation masks for each unique DLO.
 
 For the dataset provided in this repo, simple color filtering is used to achieve the binary masks.
-For those interested in using *mBEST* for more complex scenes, please use the DCNN model provided by [FASTDLO](https://github.com/lar-unibo/fastdlo) to obtain the initial binary mask.
+For those interested in using *mBEST* for more complex scenes, please use the DCNN model provided by [*FASTDLO*](https://github.com/lar-unibo/fastdlo) to obtain the initial binary mask.
+
+Below is a video example showcasing the realtime capabilities of *mBEST* against the SOTA method [*RT-DLO*](https://github.com/lar-unibo/RT-DLO). 
+Additional video examples showcasing more complicated cases involving numerous DLOs can be seen [here](https://www.youtube.com/watch?v=q84I9i0DOK4).
 
 <p align="center">
-<img src="figures/pipeline.png" alt>
+<img src="figures/single_dlo_example.gif" alt>
 <br>
-<em> Fig. 1 mBEST Pipeline Overview </em>
+<em> mBEST Realtime Video Example </em>
 </p>
 
 ---
