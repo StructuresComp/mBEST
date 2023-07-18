@@ -64,12 +64,14 @@ Below are some results comparing *mBEST* with *Ariadne+*, *FASTDLO*, and *RT-DLO
 ### Citation
 If our work has helped your research, please cite the following manuscript.
 ```
-@misc{choi2023mbest,
-      title={mBEST: Realtime Deformable Linear Object Detection Through Minimal Bending Energy Skeleton Pixel Traversals}, 
-      author={Andrew Choi and Dezhong Tong and Brian Park and Demetri Terzopoulos and Jungseock Joo and Mohammad Khalid Jawed},
-      year={2023},
-      eprint={2302.09444},
-      archivePrefix={arXiv},
-      primaryClass={cs.RO}
+@ARTICLE{choi2023mbest,
+  author={Choi, Andrew and Tong, Dezhong and Park, Brian and Terzopoulos, Demetri and Joo, Jungseock and Jawed, Mohammad Khalid},
+  journal={IEEE Robotics and Automation Letters}, 
+  title={mBEST: Realtime Deformable Linear Object Detection Through Minimal Bending Energy Skeleton Pixel Traversals}, 
+  year={2023},
+  volume={8},
+  number={8},
+  pages={4863-4870},
+  doi={10.1109/LRA.2023.3290419}
 }
 ```
